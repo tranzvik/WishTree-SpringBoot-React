@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import Axios from "axios";
 import {TagContainer} from "./TagContainer";
-import routes from "../data/data";
+//import routes from "../data/data";
 
 export class WishList extends Component {
 
@@ -19,7 +19,7 @@ export class WishList extends Component {
 
      fetchWishData =  () => {
         try {
-            const data =  Axios.get('http://localhost:8080/wishtreedetails', {
+            const data =  Axios.get('http://blr00cms.in.oracle.com:8080/wishtreedetails', {
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
@@ -41,8 +41,8 @@ export class WishList extends Component {
         return (<div>
             {this.state.loading && this.state.wishData.length < 0 ? <div>LOADING...</div> :
               <div className="tags">{
-                  routes.map((item, index) => (
-                      <TagContainer id={item.id} data={item} key={index}></TagContainer>
+                  this.state.wishData.map((item, index) => (
+                      <TagContainer id={item.wishId} data={item} key={index}></TagContainer>
                   ))
               }</div> }
 

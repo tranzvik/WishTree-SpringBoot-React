@@ -23,8 +23,9 @@
     },
     {
         id:5,
-        wishDetails: 'Teddy Bear',
-        wishTaken: true,
+        wishDetails: 'Meenakshi Amma (84)' + "\n" +
+            'Vicks, slipper (Size: 5), toothbrush, torch, nail cutter, ponds powder, Dates',
+        wishTaken: false,
 
     },
     {

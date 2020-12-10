@@ -64,7 +64,7 @@ export class TagContainer extends Component {
         formData['wishTaken'] = true;
         this.setState({wishDetails: formData});
         console.log("wishDetails" + this.state.wishDetails);
-        //this.submitData(this.state.wishDetails);
+        this.submitData(this.state.wishDetails);
 
     };
 
@@ -72,7 +72,7 @@ export class TagContainer extends Component {
 
         let msg = "";
         let priority = "";
-        Axios.post('http://localhost:8080/wishtree', wishDetails, {
+        Axios.post('http://blr00cms.in.oracle.com:8080/wishtree', wishDetails, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept':'application/json'
@@ -139,7 +139,7 @@ export class TagContainer extends Component {
 
                         <div className="tag-side tag-1-side is-back">
                             <div className="tag-1-top"></div>
-                            <div className="tag-text tag-1-text">
+                            <div className="tag-text tag-1-text tag-back">
                                 {this.state.detail}
                                 <div>
                                     <Button variant="contained"
