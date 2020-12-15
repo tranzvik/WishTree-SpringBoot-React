@@ -72,7 +72,7 @@ export class TagContainer extends Component {
 
         let msg = "";
         let priority = "";
-        Axios.post('http://blr00cms.in.oracle.com:8080/wishtree', wishDetails, {
+        Axios.post('http://localhost:8080/wishtree', wishDetails, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept':'application/json'
