@@ -19,7 +19,7 @@ export class WishList extends Component {
 
      fetchWishData =  () => {
         try {
-            const data =  Axios.get('http://blr00cms.in.oracle.com:8080/wishtreedetails', {
+            const data =  Axios.get('http://localhost:8080/wishtreedetails', {
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
